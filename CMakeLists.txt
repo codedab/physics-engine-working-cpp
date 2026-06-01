@@ -24,10 +24,6 @@ set(LIB_SOURCES
 add_library(physics_engine STATIC ${LIB_SOURCES})
 target_include_directories(physics_engine PUBLIC include)
 
-# Optional demo executable
-add_executable(physics_demo src/demo.cpp)
-target_link_libraries(physics_demo PRIVATE physics_engine)
-
 # Installation rules
 install(TARGETS physics_engine ARCHIVE DESTINATION lib)
 install(DIRECTORY include/ DESTINATION include)
